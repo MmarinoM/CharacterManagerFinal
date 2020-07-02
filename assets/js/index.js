@@ -61,7 +61,17 @@ function createOneCharacter()
   const shortDescriptionInput = document.getElementById("shortDescription").value;
   const descriptionInput = document.getElementById("descriptionform").value;
   const imgPreview = document.getElementById("imagePreview").src;
-  const imageInput = imgPreview.substring(23, imgPreview.length);
+  let imageInput = "";
+
+  if(imgPreview != window.location.href)
+        {
+            imageInput = imgPreview.substring(23, imgPreview.length);
+            
+        }
+        else
+        {
+            imageInput = "";
+        }
 
   console.log(nameInput);
   console.log(shortDescriptionInput);
@@ -261,7 +271,7 @@ document.getElementById("reload").addEventListener("click",function(){
 document.getElementById("send").addEventListener("click",function(){
     
     postCharacter(createOneCharacter());
-    setTimeout(window.location.reload.bind(window.location), 1500);
+    setTimeout(window.location.reload.bind(window.location), 1000);
     
     
     
@@ -277,7 +287,7 @@ document.getElementById("sendMODIF").addEventListener("click",function(){
     console.log(heroes);
     console.log("bonjour");
     updateCharacter(heroes[idCharacter]);
-    setTimeout(window.location.reload.bind(window.location), 1500);
+    setTimeout(window.location.reload.bind(window.location), 1000);
     
     
 })    
@@ -289,7 +299,7 @@ document.getElementById("deleteEDIT").addEventListener("click",function(){
   var result = confirm ("Are you sure this character should be deleted ?");
   if (result==true) {
   deleteCharacter(heroes[idCharacter].id);
-  setTimeout(window.location.reload.bind(window.location), 1500);
+  setTimeout(window.location.reload.bind(window.location), 1000);
   
   } 
 });
