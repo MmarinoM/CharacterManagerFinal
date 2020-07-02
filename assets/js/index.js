@@ -195,7 +195,7 @@ async function displayList(){
         var result = confirm ("Are you sure this character should be deleted ?");
         if (result==true) {
         deleteCharacter(idCharacter);
-        setTimeout(window.location.reload.bind(window.location), 500);
+        setTimeout(window.location.reload.bind(window.location), 1500);
         
         }        
     });
@@ -261,7 +261,7 @@ document.getElementById("reload").addEventListener("click",function(){
 document.getElementById("send").addEventListener("click",function(){
     
     postCharacter(createOneCharacter());
-    setTimeout(window.location.reload.bind(window.location), 500);
+    setTimeout(window.location.reload.bind(window.location), 1500);
     
     
     
@@ -277,7 +277,7 @@ document.getElementById("sendMODIF").addEventListener("click",function(){
     console.log(heroes);
     console.log("bonjour");
     updateCharacter(heroes[idCharacter]);
-    setTimeout(window.location.reload.bind(window.location), 500);
+    setTimeout(window.location.reload.bind(window.location), 1500);
     
     
 })    
@@ -289,7 +289,7 @@ document.getElementById("deleteEDIT").addEventListener("click",function(){
   var result = confirm ("Are you sure this character should be deleted ?");
   if (result==true) {
   deleteCharacter(heroes[idCharacter].id);
-  setTimeout(window.location.reload.bind(window.location), 500);
+  setTimeout(window.location.reload.bind(window.location), 1500);
   
   } 
 });
