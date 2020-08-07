@@ -1,5 +1,5 @@
 CharacterManagerFinal
-[CharacterManagerWebsite](https://mmarinom.github.io/CharacterManager/)
+[CharacterManagerWebsite](https://mmarinom.github.io/CharacterManagerFinal/)
 
 
 Membres du groupe
